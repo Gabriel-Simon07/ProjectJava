@@ -12,6 +12,19 @@ public class Main3 {
 		int valorCalculado = 10 + (x * y) / z;
 		
 		System.out.printf("O valor total calculado é %d", valorCalculado);
+		
+		System.out.println("----------");
+		
+		float baseMenor, baseMaior, altura, area;
+		baseMenor = 6;
+		baseMaior = 8;
+		altura = 5;
+		area = 0;
+		
+		area = (baseMaior + baseMenor)/2*altura;
+		
+		System.out.printf("O valor da área é %.2f", area);
+		
 	}
 
 }
