@@ -1,33 +1,37 @@
-package JavaPOO;
+package Entities;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class AreaTriangulo {
+public class MainTriangulo {
 
 	public static void main(String[] args) {
-
+		
 		Locale.setDefault(Locale.US);
-
 		Scanner scanner = new Scanner(System.in);
-		double xA, xB, xC, yA, yB, yC;
+	
+		Triangulo x, y;
+		
+		x = new Triangulo();
+		y = new Triangulo();
+		
 		double p;
 
 		System.out.println("Informe os lados do triângulo X : ");
-		xA = scanner.nextDouble();
-		xB = scanner.nextDouble();
-		xC = scanner.nextDouble();
+		x.a = scanner.nextDouble();
+		x.b = scanner.nextDouble();
+		x.c = scanner.nextDouble(); 
 
 		System.out.println("Informe os lados do triângulo Y : ");
-		yA = scanner.nextDouble();
-		yB = scanner.nextDouble();
-		yC = scanner.nextDouble();
+		y.a = scanner.nextDouble();
+		y.b = scanner.nextDouble();
+		y.c = scanner.nextDouble();
 
-		p = (xA + xB + xC) / 2.0;
-		double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+		p = (x.a + x.b + x.c) / 2.0;
+		double areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
 
-		p = (xA + xB + xC) / 2.0;
-		double areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+		p = (y.a + y.b + y.c) / 2.0;
+		double areaY = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
 
 		System.out.printf("O valor do triângulo X %.4f%n", areaX);
 		System.out.printf("O valor do triângulo Y %.4f%n", areaY);
