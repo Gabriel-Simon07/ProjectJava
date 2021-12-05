@@ -19,10 +19,20 @@ public class MainProduct {
 		product.preco = scanner.nextDouble();
 		System.out.println("Quantidade em estoque : ");
 		product.quantidade = scanner.nextInt();
-
-		System.out.println("Nome : " + product.nome + ", preço " + product.preco + ", quantidade em estoque "
-				+ product.quantidade);
-
+		
+		System.out.println("Informações do produto: " + product + "\n");
+		
+		System.out.println("Informe a quantidade de produtos a serem inseridas no estoque: ");
+		int qtdProdutos = scanner.nextInt();
+		product.adicionarProdutos(qtdProdutos);
+		
+		System.out.println("\nInformações do produto atualizados: " + product);
+		
+		System.out.println("Informe a quantidade de produtos a serem retiradas do estoque: ");
+		int qtdProdutosRetirar = scanner.nextInt();
+		product.removerProdutos(qtdProdutosRetirar);
+		
+		System.out.println("\nInformações do produto atualizados: " + product);
 		scanner.close();
 	}
 
