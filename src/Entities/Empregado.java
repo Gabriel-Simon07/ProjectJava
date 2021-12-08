@@ -11,7 +11,7 @@ public class Empregado {
 	}
 	
 	public void aumentoSalario(double percentual) {
-		this.salarioBruto = (percentual / 100) * salarioLiquido();
+		this.salarioBruto += this.salarioBruto * percentual / 100;
 	}
 	
 	public String toString() {

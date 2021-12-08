@@ -23,7 +23,7 @@ public class EmpregadoMain {
 		System.out.println("Qual o percentual de aumento do salário : ");
 		empregado.aumentoSalario(scanner.nextDouble());
 		
-		System.out.println("Dados atualizados " + empregado.aumentoSalario());
+		System.out.println("Dados atualizados " + empregado.toString());
 	}
 
 }
