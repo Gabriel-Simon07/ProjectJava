@@ -6,6 +6,9 @@ public class Conta {
 	String nomeTitular;
 	double valorDeposito;
 	
+	public Conta() {
+	}
+	
 	public Conta(int numeroConta, String nomeTitular, double valorDeposito) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
@@ -39,5 +42,7 @@ public class Conta {
 		return taxaDesconto -= valorSaque;
 	}
 	
-	
+	public String toString() {
+		return "Número da conta: " + this.numeroConta + " Nome do titular: " + this.nomeTitular + " Valor: " + this.valorDeposito;
+	}
 }
