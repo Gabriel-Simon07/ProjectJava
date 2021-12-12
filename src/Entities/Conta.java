@@ -29,13 +29,14 @@ public class Conta {
 		return nomeTitular;
 	}
 	
-	public double deposito() {
-		return 
+	public double deposito(double valorDeposito) {
+		return this.valorDeposito += valorDeposito;
 	}
 	
-	public double saques() {
+	public double saques(double valorSaque) {
 		double taxa = 5;
-		return 
+		double taxaDesconto = taxa - this.valorDeposito;
+		return taxaDesconto -= valorSaque;
 	}
 	
 	
