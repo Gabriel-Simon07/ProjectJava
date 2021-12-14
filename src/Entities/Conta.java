@@ -2,17 +2,17 @@ package Entities;
 
 public class Conta {
 
-	int numeroConta;
-	String nomeTitular;
-	double valorDeposito;
+	private int numeroConta;
+	private String nomeTitular;
+	private double valorDeposito;
 	
 	public Conta() {
 	}
 	
-	public Conta(int numeroConta, String nomeTitular, double valorDeposito) {
+	public Conta(int numeroConta, String nomeTitular, double valorDepositoInicial) {
 		this.numeroConta = numeroConta;
 		this.nomeTitular = nomeTitular;
-		this.valorDeposito = valorDeposito;
+		deposito(valorDepositoInicial);
 	}
 	
 	public Conta(int numeroConta, String nomeTitular) {
@@ -32,17 +32,15 @@ public class Conta {
 		return nomeTitular;
 	}
 	
-	public double deposito(double valorDeposito) {
-		return this.valorDeposito += valorDeposito;
+	public void deposito(double valorDeposito) {
+		this.valorDeposito += valorDeposito;
 	}
 	
-	public double saques(double valorSaque) {
-		double taxa = 5;
-		double taxaDesconto = taxa - this.valorDeposito;
-		return taxaDesconto -= valorSaque;
+	public void saques(double valorSaque) {
+		valorDeposito -= valorSaque + 5;
 	}
 	
 	public String toString() {
-		return "Número da conta: " + this.numeroConta + " Nome do titular: " + this.nomeTitular + " Valor: " + this.valorDeposito;
+		return "Dados da conta: \nNúmero da conta: " + this.numeroConta + " Nome do titular: " + this.nomeTitular + " Valor: " + this.valorDeposito;
 	}
 }

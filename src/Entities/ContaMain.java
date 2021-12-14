@@ -6,21 +6,28 @@ import java.util.Scanner;
 public class ContaMain {
 
 	public static void main(String[] args) {
-		
+
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
-		Conta conta = new Conta();
-		
+		Conta conta;
+
 		System.out.println("Informe o número da conta: ");
-		conta.numeroConta = scanner.nextInt();
-		
+		int numeroConta = scanner.nextInt();
+
 		System.out.println("Informe o nome do titular: ");
-		conta.nomeTitular = scanner.next();
-		
-		System.out.println("Informe o valor a ser depositado: ");
-		conta.valorDeposito = scanner.nextDouble();
-		
-		conta.deposito(3);
+		String nomeTitular = scanner.next();
+
+		System.out.println("Tem deposito inicial (y/n)? ");
+		char resposta = scanner.next().charAt(0);
+
+		if (resposta == 'y') {
+			System.out.println("Informe o valor a ser depositado: ");
+			double valorDeposito = scanner.nextDouble();
+			conta = new Conta(numeroConta, nomeTitular, valorDeposito);
+			conta.deposito(valorDeposito);
+		} else {
+			conta = new Conta(numeroConta, nomeTitular);
+		}
 		
 		System.out.println(conta.toString());
 	}
