@@ -31,7 +31,7 @@ public class AluguelEstudantesMain {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("\nQuartos alugados :");
 			if (aluguel[i] != null) {
-				System.out.println("Quarto número " + i + " : " + aluguel[i]);
+				System.out.println("Quarto número " + i + " : " + aluguel[i]); 
 			}
 		}
 
